@@ -26,7 +26,6 @@ module Dpl
         info output
         if json
           shell "echo \"#{output.gsub(/\n/, '').gsub(/"/, '\"')}\" > ./NETLIFY_DEPLOY_JSON_ID_#{site}.json"
-          shell "pwd && ls -la"
         end
       end
 
