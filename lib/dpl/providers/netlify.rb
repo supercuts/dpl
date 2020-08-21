@@ -25,6 +25,7 @@ module Dpl
         output = shell "netlify deploy #{deploy_opts}", echo: false, capture:true
         info output
         if json
+          shell "pwd && ls -la"
           write_file "./NETLIFY_DEPLOY_JSON_ID_#{site}.json", output
         end
       end
